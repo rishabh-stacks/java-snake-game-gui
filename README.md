@@ -1,4 +1,4 @@
-# 🐍 Snake — Classic Arcade (Java Edition)
+# 🐍 Snake — Classic Arcade Game
 
 ![Java](https://img.shields.io/badge/Java-14%2B-orange?logo=openjdk&logoColor=white)
 ![GUI](https://img.shields.io/badge/GUI-Swing-blue)
