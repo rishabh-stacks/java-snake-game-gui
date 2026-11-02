@@ -131,7 +131,7 @@ Delete that file to reset the high score.
 
 ## 🧩 UML Diagrams
 
-Four diagrams describe the design from different angles. They are written in [Mermaid](https://mermaid.js.org/) and render automatically on GitHub.
+Three diagrams describe the design from different angles. They are written in [Mermaid](https://mermaid.js.org/) and render automatically on GitHub.
 
 ### 1. Class Diagram
 
@@ -220,38 +220,7 @@ stateDiagram-v2
     GAME_OVER --> PLAYING : Space, Enter
 ```
 
-### 3. Sequence Diagram
-
-A key press never moves the snake directly. It only queues a direction, and the Swing `Timer` applies it on the next tick. This guarantees at most one turn per tick, so quick key presses can never reverse the snake into itself.
-
-```mermaid
-%%{init: {'theme': 'neutral'}}%%
-sequenceDiagram
-    autonumber
-    actor Player
-    participant Panel as GamePanel
-    participant Timer as Swing Timer
-    participant File as High-score file
-
-    Player->>Panel: press direction key
-    Panel->>Panel: queue direction (reversals ignored)
-
-    loop every tick, 115 ms down to 58 ms
-        Timer->>Panel: tick()
-        Panel->>Panel: apply queued direction and move head
-        alt wall or self collision
-            Panel->>Panel: state = GAME_OVER
-            opt score beats high score
-                Panel->>File: save score
-            end
-        else food eaten
-            Panel->>Panel: grow, score += 10, spawn food
-        end
-        Panel->>Panel: repaint()
-    end
-```
-
-### 4. Activity Diagram
+### 3. Activity Diagram
 
 The complete logic of a single call to `tick()`.
 
