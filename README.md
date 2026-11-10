@@ -131,7 +131,7 @@ Delete that file to reset the high score.
 
 ## 🧩 UML Diagrams
 
-Three diagrams describe the design from different angles. They are written in [Mermaid](https://mermaid.js.org/) and render automatically on GitHub.
+Three diagrams describe the design from different angles. They are written in [Mermaid](https://mermaid.js.org/) and render automatically on GitHub. Yes, I know Mermaid and Use Obsidian (Don't Judge Me)
 
 ### 1. Class Diagram
 
