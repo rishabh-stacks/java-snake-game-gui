@@ -9,7 +9,8 @@ A self-contained implementation of the classic Snake game written in **Pure Java
 No external libraries, no build tools, one source file. 
 It features a dark arcade-style UI, smooth keyboard controls, progressive speed-up, pause/restart support, and a high score that is saved between sessions.
 
-- This was originally my College Project for Advanced Java Programming and I modified it a little bit (UI), but the Idea was simple so it remains the same. 
+- This was originally my College Project for Advanced Java Programming and I modified it a little bit (UI), but the Idea was simple so it remains the same.
+- I have Consolidated it on one file for simple Reusability and Improvement. As I am still Learning GUI, I wanted it all in one place .
 
 
 ---
